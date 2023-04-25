@@ -355,7 +355,7 @@ module Snibbets
         $stdout.puts(Snibbets.options[:all_notes] ? output : output.clean_code)
       end
       if Snibbets.options[:copy]
-        OS.copy(output)
+        OS.copy(Snibbets.options[:all_notes] ? output : output.clean_code)
         $stderr.puts "Copied to clipboard"
       end
     end
